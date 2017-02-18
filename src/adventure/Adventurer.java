@@ -11,6 +11,15 @@ An adventurer can:
 
 package adventure;
 
+import java.util.ArrayList;
+
 public class Adventurer {
 
+	private ArrayList<E> Inventory<Thing>
+		public void addItem(Thing t)
+			Inventory.add(end, t);
+		public void removeItem(Thing t)
+			Inventory.remove(t);
+
 }
+
