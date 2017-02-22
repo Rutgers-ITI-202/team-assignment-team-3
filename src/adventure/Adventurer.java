@@ -14,9 +14,11 @@ package adventure;
 import java.util.ArrayList;
 
 public class Adventurer {
+	
+	
 
 	private String Location
-		public void changeRoom(Location x)
+		public void changeRoom(String x)
 			Location = x;
 	
 	private ArrayList<E> Inventory<Thing>
