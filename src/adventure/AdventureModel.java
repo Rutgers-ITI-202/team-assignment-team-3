@@ -14,6 +14,10 @@ package adventure;
 import java.scanner;
 
 public class AdventureModel {
+	
+	Adventurer Adventurer = new Adventurer;	
+	Object Rock = new Object;
+	Room Room1 = new Room;
 
 	System.out.println("Please enter a room: ");
 	
@@ -28,7 +32,7 @@ public class AdventureModel {
 			switch (input) {
 			
 			case "Room 1":
-				room = "Room 1";
+				Adventurer.location = Room1;
 				//call room 1?
 			
 			default:
