@@ -1,12 +1,12 @@
 /*
 An adventurer has:
-•	A location (some room).
-•	An inventory (the things being carried).  When the player executes the “take thing” command, the item should be added to the inventory.
+ï¿½	A location (some room).
+ï¿½	An inventory (the things being carried).  When the player executes the ï¿½take thingï¿½ command, the item should be added to the inventory.
 
 An adventurer can:
-•	Move from room to room.
-•	Carry a number of objects.
-•	Pick up, drop, look at, and use various objects.
+ï¿½	Move from room to room.
+ï¿½	Carry a number of objects.
+ï¿½	Pick up, drop, look at, and use various objects.
 */
 
 package adventure;
@@ -15,9 +15,14 @@ import java.util.ArrayList;
 
 public class Adventurer {
 
+	private String Location
+		public void changeRoom(Location x)
+			Location = x;
+	
 	private ArrayList<E> Inventory<Thing>
 		public void addItem(Thing t)
 			Inventory.add(end, t);
+			
 		public void removeItem(Thing t)
 			Inventory.remove(t);
 
