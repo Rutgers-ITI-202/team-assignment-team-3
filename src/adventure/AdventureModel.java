@@ -33,12 +33,15 @@ public class AdventureModel {
 			
 				case "Look":
 					Room.description(String x);
+					
+				case "Inventory":
+					System.out.println(student.Inventory);
 				
 				case "Take":
-					Adventurer.addItem(String x);
+					student.addItem(String x);
 				
 				case "Use":
-				
+					
 			
 				default:
 					System.out.println("Input not valid, please try again.");
