@@ -34,7 +34,7 @@ public class AdventureModel {
 				case "Look":
 					Room.description(String x);
 					
-				case "Inventory":
+				case "Bookbag":
 					System.out.println(student.Inventory);
 				
 				case "Take":
