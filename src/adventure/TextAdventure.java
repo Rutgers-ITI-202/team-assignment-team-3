@@ -3,28 +3,31 @@ This class:
 �	Contains the main method used to start the game.
 �	Talks to the AdventureModel and to the Adventurer classes, as needed.
 */
-java.import.io
-import java.scanner
 
 package adventure;
 
-public class TextAdventure {
+import java.util.Scanner;
 
+public class textadventure {
+	boolean condition = false;
+	private static Scanner myScanner;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-			
-		Scanner mainscan = new Scanner(System.in);
-		
-		System.out.println("Hello, welcome to our game! Would you like to play?: ");
-		String response = mainscan.next();
-		
-		if (response.equalsIgnoreCase("Yes")){
-			AdventureModel.go;
-			}
-		else {
-			System.out.println("Ok bye");
+		String input = "";
+		myScanner = new Scanner(System.in);
+		System.out.println("Welcome To 'Escape The Library!'");
+		System.out.println("Type 'begin' to start the game! Or anything else to exit game...");
+		input = myScanner.nextLine();
+		adventuremodel student = new adventuremodel();
+		if (input.equalsIgnoreCase("begin")){
+			boolean condition = true;
+			student.beginning();
+			student.command();
 		}
-		Adventurer student = new Adventurer();
+		else{
+			boolean condition = false;
+			student.noplay();
+		}
 	}
 
 }

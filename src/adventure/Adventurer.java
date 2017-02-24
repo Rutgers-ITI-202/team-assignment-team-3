@@ -20,14 +20,14 @@ public class Adventurer {
 		public void changeRoom(String x){
 			Location = x;}
 	
-	public static ArrayList <String> Inventory = new ArrayList<String>();
+	public static ArrayList <String> Bookbag = new ArrayList<String>();
 		
 		public void addItem (String t) {
-			Inventory.add(t); }
+			Bookbag.add(t); }
 			
 		public void removeItem (String t) {
-			Inventory.remove(t); }
+			Bookbag.remove(t); }
 
-	private String Info;
+
 
 }
