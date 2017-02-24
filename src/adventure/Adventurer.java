@@ -22,11 +22,14 @@ public class Adventurer {
 			Location = x;
 	
 	private ArrayList<E> Inventory<Thing>
+		
 		public void addItem(Thing t)
 			Inventory.add(end, t);
 			
 		public void removeItem(Thing t)
 			Inventory.remove(t);
+		
+	private String Info
 
 }
 

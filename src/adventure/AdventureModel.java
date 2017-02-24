@@ -18,27 +18,31 @@ public class AdventureModel {
 	Adventurer Adventurer = new Adventurer;	
 	Object Rock = new Object;
 	Room Room1 = new Room;
-
-	System.out.println("Please enter a room: ");
 	
 	Scanner scanner = new Scanner(System.in);
 	
+	System.out.println("Please enter a command: ");
+	
 	boolean condition = true;
 	
-	String room;
 	
 	while(condition == true) {
 		String input = scanner.next();
 			switch (input) {
 			
-			case "Room 1":
-				Adventurer.location = Room1;
-				//call room 1?
+			case "Look":
+				Room.description(String x);
+				
+			case "Take":
+				Adventurer.addItem(String x);
+				
+			case "Use":
+				
 			
 			default:
 				System.out.println("Input not valid, please try again.");
 			}	
 
 }
-	
+
 }
