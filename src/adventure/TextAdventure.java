@@ -8,24 +8,26 @@ package adventure;
 
 import java.util.Scanner;
 
-public class textadventure {
+public class TextAdventure {
 	boolean condition = false;
 	private static Scanner myScanner;
+	private static AdventureModel student = new AdventureModel();
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String input = "";
 		myScanner = new Scanner(System.in);
 		System.out.println("Welcome To 'Escape The Library!'");
-		System.out.println("Type 'begin' to start the game! Or anything else to exit game...");
+		System.out.println("\nType 'begin' to start the game! Or anything else to exit game...");
 		input = myScanner.nextLine();
-		adventuremodel student = new adventuremodel();
 		if (input.equalsIgnoreCase("begin")){
 			boolean condition = true;
 			student.beginning();
+			while(condition == true){
 			student.command();
+			}
 		}
+
 		else{
-			boolean condition = false;
 			student.noplay();
 		}
 	}

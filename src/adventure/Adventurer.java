@@ -16,18 +16,12 @@ import java.util.ArrayList;
 public class Adventurer {
 	
 
-	public String Location;
-		public void changeRoom(String x){
-			Location = x;}
-	
-	public static ArrayList <String> Bookbag = new ArrayList<String>();
-		
-		public void addItem (String t) {
-			Bookbag.add(t); }
-			
-		public void removeItem (String t) {
-			Bookbag.remove(t); }
-
-
+	public  static ArrayList<String> Bookbag = new ArrayList<String>();
+		public void addItem (String t){
+			Bookbag.add(t);
+			}
+		public void removeItem (String t){
+			Bookbag.remove(t);
+			}
 
 }
