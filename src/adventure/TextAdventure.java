@@ -8,10 +8,17 @@ package adventure;
 
 import java.util.Scanner;
 
+/* @author Edwin, Lauren, and Brandon
+ * @since 02/24/17
+ * */
+
 public class TextAdventure {
 	boolean condition = false;
 	private static Scanner myScanner;
 	private static AdventureModel student = new AdventureModel();
+	
+	/* Asks user if they would like to play, if so begins game */
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String input = "";

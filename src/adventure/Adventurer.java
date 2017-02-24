@@ -13,9 +13,14 @@ package adventure;
 
 import java.util.ArrayList;
 
+/* @author Edwin, Lauren, and Brandon
+ * @since 02/24/17
+ * */
+
 public class Adventurer {
 	
-
+/*Player inventory*/
+	
 	public  static ArrayList<String> Bookbag = new ArrayList<String>();
 		public void addItem (String t){
 			Bookbag.add(t);

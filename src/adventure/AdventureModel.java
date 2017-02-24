@@ -13,22 +13,31 @@ package adventure;
 
 import java.util.Scanner;
 
+/* @author Edwin, Lauren, and Brandon
+ * @since 02/24/17
+ * */
+
 public class AdventureModel {
 	private static Scanner myScanner;
 	private static Adventurer student = new Adventurer();
 
+	/* intro of game, describes situation of player and different commands they can enter */
+	
 	public void beginning(){
 		System.out.println(" \nYou open your eyes, still half asleep. Confused, you try and recall what happened... "
 				+ "\nSlowly you begin to remember...It was Friday evening and you have a big exam on "
 				+ "\nMonday to study for. In order to concentrate, you went to the local library. "
-				+ "\nBut after so many hours of studying at the library, you accidently fell asleep."
-				+ "\n\nHere are the commands you can use: 'Look', 'Pickup[item]', 'Drop[item]', and 'Open Bag'"
-				+ "\nNote: Do not include '[]' in your command, the '[]' are only there to indicate item names!");
+				+ "\nBut after so many hours of studying, you accidently fell asleep!"
+				+ "\n\nHere are the commands you can use: 'Look', 'Pickup[item]', 'Drop[item]', and 'Open Bag'. "
+				+ "\nNote: Do not include '[]' in your command, the '[]' are only there to indicate item names! "
+				+ "\nEnter 'Exit' at any time to quit the game.");
 	}
 	
 	public static void noplay(){
 		System.out.println("\nMaybe you'll want to play next time...");
 	}
+	
+	/* Suggests that player take both items provided, allows them to 'look' around the room */
 	
 	public static void look(){
 		if(student.Bookbag.contains("book") && student.Bookbag.contains("id")){
@@ -53,12 +62,18 @@ public class AdventureModel {
 		System.out.println("Your progress will be lost. Bye~");
 		System.exit(0);
 	}
+	
+	/* catches if player tries to input a command that doesn't make sense */
+	
 	public static void noitem(){
 		System.out.println("Error, you can't throw away what's not in your bookbag!");
 	}
 	public static void alreadyhave(){
 		System.out.println("Error, you can't pick up something that's already in your bookbag!");
 	}
+	
+	/* Player adds and discards items to their inventory */
+	
 	public void command(){
 		String input = "";
 		myScanner = new Scanner(System.in);
