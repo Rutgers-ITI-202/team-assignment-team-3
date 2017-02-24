@@ -21,27 +21,28 @@ public class AdventureModel {
 	
 	Scanner scanner = new Scanner(System.in);
 	
-	System.out.println("Please enter a command: ");
+	String go() {
+		System.out.println("Please enter a command: ");
 	
-	boolean condition = true;
+		boolean condition = true;
 	
 	
-	while(condition == true) {
-		String input = scanner.next();
-			switch (input) {
+		while(condition == true) {
+			String input = scanner.next();
+				switch (input) {
 			
-			case "Look":
-				Room.description(String x);
+				case "Look":
+					Room.description(String x);
 				
-			case "Take":
-				Adventurer.addItem(String x);
+				case "Take":
+					Adventurer.addItem(String x);
 				
-			case "Use":
+				case "Use":
 				
 			
-			default:
-				System.out.println("Input not valid, please try again.");
-			}	
+				default:
+					System.out.println("Input not valid, please try again.");
+			}}	
 
 }
 

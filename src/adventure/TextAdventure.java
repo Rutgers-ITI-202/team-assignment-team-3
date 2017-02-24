@@ -24,7 +24,7 @@ public class TextAdventure {
 		else {
 			System.out.println("Ok bye");
 		}
-		
+		Adventurer student = new Adventurer();
 	}
 
 }

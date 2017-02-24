@@ -15,21 +15,19 @@ import java.util.ArrayList;
 
 public class Adventurer {
 	
-	
 
-	private String Location
-		public void changeRoom(String x)
-			Location = x;
+	public String Location;
+		public void changeRoom(String x){
+			Location = x;}
 	
-	private ArrayList<E> Inventory<Thing>
+	public static ArrayList <String> Inventory = new ArrayList<String>();
 		
-		public void addItem(Thing t)
-			Inventory.add(end, t);
+		public void addItem (String t) {
+			Inventory.add(t); }
 			
-		public void removeItem(Thing t)
-			Inventory.remove(t);
-		
-	private String Info
+		public void removeItem (String t) {
+			Inventory.remove(t); }
+
+	private String Info;
 
 }
-
