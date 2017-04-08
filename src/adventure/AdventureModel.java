@@ -133,4 +133,16 @@ public class AdventureModel {
 			command();
 		}
 	}
+	room.look();
+	
+	interface Lookable {
+		public String look() 
+	}
+	
+	public class Item implements Lookable {
+		private String description;
+		public String look(){
+			return description;
+		}
+	}
 }
