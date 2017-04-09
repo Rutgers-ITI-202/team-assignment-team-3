@@ -13,30 +13,46 @@ import java.util.Scanner;
  * */
 
 public class TextAdventure {
-	boolean condition = false;
+	
 	private static Scanner myScanner;
-	private static AdventureModel student = new AdventureModel();
+	private static AdventureModel model = new AdventureModel();
 	
 	/* Asks user if they would like to play, if so begins game */
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String input = "";
 		myScanner = new Scanner(System.in);
-		System.out.println("Welcome To 'Escape The Library!'");
-		System.out.println("\nType 'begin' to start the game! Or anything else to exit game...");
-		input = myScanner.nextLine();
-		if (input.equalsIgnoreCase("begin")){
-			boolean condition = true;
-			student.beginning();
-			while(condition == true){
-			student.command();
+		System.out.println("Welcome To 'Library Escape'!");
+		System.out.println("\nAvailable Commands: \n1. = Start Game \n2. = Exit Game");
+		boolean condition = false;
+		
+		while(condition == false){
+			try{
+				String input = myScanner.nextLine();
+				int num = Integer.parseInt(input);
+				if(num == 1){
+					condition = true;
+					model.beginning();
+					while(condition == true){
+						model.command();
+					}
+				}
+
+				else if(num == 2){
+					System.exit(0);
+					condition = true;
+				}
+				
+				else if(num!=2 && num!=1){
+					condition = false;
+					System.out.println("Sorry, that was an invalid input");
+				}
+			}
+			
+			catch(Exception e){
+				System.out.println("Sorry, that was an invalid input");
+				condition = false;
 			}
 		}
-
-		else{
-			student.noplay();
-		}
 	}
-
 }
