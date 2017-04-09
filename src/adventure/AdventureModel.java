@@ -8,7 +8,6 @@ This class:
 	o	As commands are entered, they should be copied to the main text area.
 	o	The method that executes commands should return a String to be displayed in the main text area.
 */
-
 package adventure;
 
 import java.util.Scanner;
@@ -24,43 +23,16 @@ public class AdventureModel {
 	/* intro of game, describes situation of player and different commands they can enter */
 	
 	public void beginning(){
-		System.out.println(" \nYou open your eyes, still half asleep. Confused, you try and recall what happened... "
+		System.out.println("\nYou open your eyes, still half asleep. Confused, you try and recall what happened... "
 				+ "\nSlowly you begin to remember...It was Friday evening and you have a big exam on "
 				+ "\nMonday to study for. In order to concentrate, you went to the local library. "
 				+ "\nBut after so many hours of studying, you accidently fell asleep!"
-				+ "\n\nHere are the commands you can use: 'Look', 'Pickup[item]', 'Drop[item]', and 'Open Bag'. "
-				+ "\nNote: Do not include '[]' in your command, the '[]' are only there to indicate item names! "
-				+ "\nEnter 'Exit' at any time to quit the game.");
+				+ "\n\nCommands: Look = '1', Go = '2', Backpack = '3', Take = '4', Drop = '5', End = '6'. "
+				+ "\nYou may enter 5 at any time to quit the game.");
 	}
 	
-	public static void noplay(){
+	public static void noplay() {
 		System.out.println("\nMaybe you'll want to play next time...");
-	}
-	
-	/* Suggests that player take both items provided, allows them to 'look' around the room */
-	
-	public static void look(){
-		if(student.Bookbag.contains("book") && student.Bookbag.contains("id")){
-			System.out.println("\nYou look around the room and see that you have taken all the items that you can fit into your bag.");
-		}
-		else if(!student.Bookbag.contains("book") && !student.Bookbag.contains("id")){
-			System.out.println("You look around the room and see bookselves and empty tables. You look down and on the"
-				+ "\ntable you were sleeping on, you see your [ID] card and a [book]. On your back you feel a heavy"
-				+ "\nsensation. You look back and see the old bookbag you've been using for the last 5 years.");
-		}
-		else if(!student.Bookbag.contains("id")){
-			System.out.println("\nYou look around the room and see the bookselves and empty tables. Other than the [ID] card "
-					+ "\non the desk next to you, there is nothing of interest here. Maybe you should pickup the [ID] card!");
-		}
-		else{
-			System.out.println("\nYou look around the room and see the bookselves and empty tables. Other than the [book]"
-						+ "\n on the desk next to you, there is nothing of interest here. Maybe you should pickup the book!");
-		}
-	}
-
-	public static void end(){
-		System.out.println("Your progress will be lost. Bye~");
-		System.exit(0);
 	}
 	
 	/* catches if player tries to input a command that doesn't make sense */
@@ -68,24 +40,60 @@ public class AdventureModel {
 	public static void noitem(){
 		System.out.println("Error, you can't throw away what's not in your bookbag!");
 	}
-	public static void alreadyhave(){
-		System.out.println("Error, you can't pick up something that's already in your bookbag!");
-	}
 	
 	/* Player adds and discards items to their inventory */
 	
 	public void command(){
-		String input = "";
 		myScanner = new Scanner(System.in);
-		input = myScanner.nextLine();
-		if(input.equalsIgnoreCase("look")){
-			look();
+		int input = myScanner.nextInt();
+		switch (input) {
+		
+			case '1' :
+				System.out.println(Room.look(student.getRoom()));
+				break;
+				
+			case '2' :
+				if (student.getRoom() == "storage" || student.getRoom() == "bathroom" || student.getRoom() == "media") {
+					System.out.print("Enter '1' to go to " + Room.leftRoom()); }
+				else {
+					System.out.print("Enter '1' to go to" + Room.leftRoom() + ".\nEnter '2' to go to " + Room.rightRoom());
+				if (student.getRoom() == "elevator") {
+					System.out.println(".\nEnter '3' to go to " Room.topRoom());}
+				}
+				break;
+				
+			case '3' :
+				System.out.println("Your backback currently contains " + student.Backpack);
+				break;
+			
+			case '4' :
+				String item = Room.roomItem(student.getRoom());
+				student.addItem(item);
+				System.out.println("You added " + item + " to your backpack!");
+				break;
+				
+			case '5' :
+				System.out.println("Your backpack currently contains " + student.Backpack);
+				for (int i=0; i<6; i++)
+					System.out.println(x);
+					student.Backpack.add(i, item);
+				
+				int deleteInput = myScanner.nextInt();
+				student.removeItem(deleteInput);
+				break;
+				
+			case '6' :
+				System.out.println("Your progress will be lost. Bye~");
+				System.exit(0);
+				break;
+				
+			default:
+				System.out.println("Please enter one of the listed commands.");
 		}
-		else if(input.equalsIgnoreCase("pickup book")){
-			if(student.Bookbag.contains("book")){
-				alreadyhave();
-			}
-			else{
+		
+		
+			
+		else{
 			System.out.println("'Introduction of Object Oriented Programming 101'. *sigh* Just looking at this book"
 					+ "\nis starting to give you a headache. You should probably take that book with you since you'll"
 					+ "\nneed it to pass your exams.");
@@ -94,46 +102,15 @@ public class AdventureModel {
 			}
 		}
 		else if(input.equalsIgnoreCase("drop book")){
-			if(student.Bookbag.contains("book")){
+			if(student.Backpack.contains("book")){
 				 student.removeItem("book");
 					System.out.println("You threw away your [book]!");	
 			}
 			else{
 				noitem();
 			}
-		}
-		
-		else if(input.equalsIgnoreCase("pickup id")){
-			if(student.Bookbag.contains("id")){
-				alreadyhave();
-			}
-			else{
-			System.out.println("This is your student [ID] card, you should probably keep it on you just to be safe!");
-			student.addItem("id");
-			System.out.println("\nThe [ID] card has been placed in your bookbag!");
-			}
-		}
-		else if(input.equalsIgnoreCase("drop id")){
-			if(student.Bookbag.contains("id")){
-			student.removeItem("id");
-			System.out.println("You threw away your [ID].");
-			}
-			else{
-				noitem();
-			}
-		}
-		else if(input.equalsIgnoreCase("open bag")){
-			System.out.println("You opened your bag and you saw :" + student.Bookbag);
-		}
-		else if(input.equalsIgnoreCase("exit")){
-			end();
-		}
-		else{
-			System.out.println("invalid command, please try again!");
-			command();
-		}
 	}
-	room.look();
+	/*room.look();
 	
 	interface Lookable {
 		public String look() 
@@ -143,6 +120,5 @@ public class AdventureModel {
 		private String description;
 		public String look(){
 			return description;
-		}
-	}
+		}*/
 }
