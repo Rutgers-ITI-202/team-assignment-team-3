@@ -3,12 +3,20 @@ package adventure;
 public class Room {
 		public static String name = Room.setName();
 		public String roomDescription;
-		public Item item;
+		public static String item;
 		public arrayList connectingRooms
 		
 		public static String returnName() {
 			return name;
 		}
+	
+	public static String roomItem(String x){
+		item = x.item;
+		return item;
+	}
+	
+	public static String roomLook(String x) {
+		
 	}
 	
 	public class Room1 extends Room {

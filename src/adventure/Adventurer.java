@@ -21,12 +21,19 @@ public class Adventurer {
 	
 /*Player inventory*/
 	
-	public  static ArrayList<String> Bookbag = new ArrayList<String>();
+	public static ArrayList<String> Backpack = new ArrayList<String>();
 		public void addItem (String t){
-			Bookbag.add(t);
+			Backpack.add(t);
 			}
 		public void removeItem (String t){
-			Bookbag.remove(t);
+			Backpack.remove(t);
 			}
-
+		
+/*Player Location*/
+		
+	public String location;
+	
+	public String getRoom() {
+		return location;
+	}
 }
