@@ -13,7 +13,7 @@ import java.util.Scanner;
  * */
 
 public class TextAdventure {
-	boolean condition = false;
+	
 	private static Scanner myScanner;
 	private static AdventureModel student = new AdventureModel();
 	
@@ -21,22 +21,37 @@ public class TextAdventure {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String input = "";
 		myScanner = new Scanner(System.in);
-		System.out.println("Welcome To 'Escape The Library!'");
-		System.out.println("\nType 'begin' to start the game! Or anything else to exit game...");
-		input = myScanner.nextLine();
-		if (input.equalsIgnoreCase("begin")){
-			boolean condition = true;
-			student.beginning();
-			while(condition == true){
-			student.command();
+		System.out.println("Welcome To 'Library Escape'!");
+		System.out.println("\nAvailable Commands: \n1. = Start Game \n2. = Exit Game");
+		
+		while(condition == false){
+			try{
+				String input = myScanner.nextLine();
+				int num = Integer.parseInt(input);
+				if(num == 1){
+					condition = true;
+					student.beginning();
+					while(condition == true){
+						student.commands();
+					}
+				}
+
+				else if(num == 2){
+					student.end();
+					condition = true;
+				}
+				
+				else if(num!=2 && num!=1){
+					condition = false;
+					System.out.println("Sorry, that was an invalid input");
+				}
+			}
+			
+			catch(Exception e){
+				System.out.println("Sorry, that was an invalid input");
+				condition = false;
 			}
 		}
-
-		else{
-			student.noplay();
-		}
 	}
-
 }
