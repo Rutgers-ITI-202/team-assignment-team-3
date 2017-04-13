@@ -32,7 +32,7 @@ public class AdventureModel {
 	}
 	
 	public static void noplay() {
-		System.out.println("\nMaybe you'll want to play next time...");
+		System.out.println("\nYour progress will be lost, bye.");
 	}
 	
 	/* catches if player tries to input a command that doesn't make sense */
@@ -74,9 +74,10 @@ public class AdventureModel {
 				
 			case '5' :
 				System.out.println("Your backpack currently contains " + student.Backpack);
-				for (int i=0; i<6; i++)
+				for (int i=0; i<6; i++) {
 					System.out.println(x);
 					student.Backpack.add(i, item);
+				}
 				
 				int deleteInput = myScanner.nextInt();
 				student.removeItem(deleteInput);
