@@ -11,29 +11,23 @@ An adventurer can:
 
 package adventure;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
-/* @author Edwin, Lauren, and Brandon
- * @since 02/24/17
- * */
-
-public class Adventurer {
+public class Adventurer extends AdventureModel{
+	private String Inventory[] = new String[8];
+	private Room rooms[] = new Room[11];
 	
-/*Player inventory*/
-	
-	public static ArrayList<String> Backpack = new ArrayList<String>();
-		public void addItem (String t){
-			Backpack.add(t);
-			}
-		public void removeItem (String t){
-			Backpack.remove(t);
-			}
-		
-/*Player Location*/
-		
-	public String location;
-	
-	public String getRoom() {
-		return location;
+	private String[] getInventory() {
+		return Inventory;
 	}
+	private void setInventory(String inventory[]) {
+		Inventory = inventory;
+	}
+
+	private Room[] getRooms() {
+		return rooms;
+	}
+	private void setRooms(Room rooms[]) {
+		this.rooms = rooms;
+	} 
 }
