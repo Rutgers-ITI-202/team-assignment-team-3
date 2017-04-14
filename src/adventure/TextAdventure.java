@@ -8,23 +8,17 @@ package adventure;
 
 import java.util.Scanner;
 
-/* @author Edwin, Lauren, and Brandon
- * @since 02/24/17
- * */
-
 public class TextAdventure {
 	
 	private static Scanner myScanner;
-	private static AdventureModel model = new AdventureModel();
-	
-	/* Asks user if they would like to play, if so begins game */
+	private static Adventurer JaimeLannister = new Adventurer();
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		boolean condition = false;
 		myScanner = new Scanner(System.in);
 		System.out.println("Welcome To 'Library Escape'!");
 		System.out.println("\nAvailable Commands: \n1. = Start Game \n2. = Exit Game");
-		boolean condition = false;
 		
 		while(condition == false){
 			try{
@@ -32,19 +26,16 @@ public class TextAdventure {
 				int num = Integer.parseInt(input);
 				if(num == 1){
 					condition = true;
-					model.beginning();
-					while(condition == true){
-						model.command();
-					}
+					JaimeLannister.beginning();
+						commands();
 				}
 
 				else if(num == 2){
-					System.exit(0);
-					System.out.println("\nMaybe you'll want to play next time...");
+					JaimeLannister.end();
 					condition = true;
 				}
 				
-				else if(num!=2 && num!=1){
+				else{
 					condition = false;
 					System.out.println("Sorry, that was an invalid input");
 				}
@@ -55,5 +46,47 @@ public class TextAdventure {
 				condition = false;
 			}
 		}
+	}
+	public static void commands(){
+		boolean condition = false;
+		myScanner = new Scanner(System.in);
+		System.out.println("Available Commands: \n1. = Look Around \n2. = Pick Up Item \n3. = Drop Item "
+				+ "\n4. = Look Inside Bookbag \n5. = Exit Game");
+		while(condition == false){
+			try{
+				String input = myScanner.nextLine();
+				int num = Integer.parseInt(input);
+				if(num == 1){
+					condition = true;
+					JaimeLannister.look();
+				}
+				else if(num == 2){
+					JaimeLannister.pickup();
+					condition = true;
+				}
+				else if(num == 3){
+					JaimeLannister.drop();
+					condition = true;
+				}
+				else if(num == 4){
+					JaimeLannister.openbag();
+					condition = true;
+				}
+				else if(num == 5){
+					JaimeLannister.end();
+					condition = true;
+				}
+				else{
+					condition = false;
+					System.out.println("Sorry, that was an invalid input");
+				}
+			}
+			
+			catch(Exception e){
+				System.out.println("Sorry, that was an invalid input");
+				condition = false;
+			}
+		}
+		
 	}
 }
