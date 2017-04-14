@@ -1,9 +1,10 @@
 Still half-asleep, you open your eyes. Realizing that you aren't in your familiar dorm, you try
 to recall what had happened...Slowly you begin to remember. It was Sunday evening and you had a 
-major final exam coming up on Monday. This was the exam that would either make or break your 
-grades for this course. Being the model university student that you were, you didn't study for it
-until the night before. Exhausted after a long cram session, you fell asleep in Young Adults section 
-and it is now way pass closing hours. Just your luck, your exam is starting in about an hour and
-if you don't get out of here in time, you're so screwed. Thankfully, you're still carrying your
-backpack but too bad there's nothing in it. The exit door is probably locked and you can't leave
-without your wallet! Objective: Find the MasterKey(to leave) and your Wallet(to pay for the Uber)! 
+major final exam coming up on Monday for Object Oriented Programming. This was the exam that would 
+either make or break your grades for this course. Being the model university student that you were, 
+you didn't study for it until the night before. Exhausted after a long cram session, you fell 
+asleep in Young Adults section and it is now way pass closing hours. Just your luck, your exam is 
+starting in about an hour and if you don't get out of here in time, you're so screwed. 
+Thankfully, you're still carrying your backpack but too bad there's nothing in it. The exit door 
+is probably locked and you can't leave without your wallet! Objective: Find the MasterKey(to leave) 
+and your Wallet(to pay for the Uber)! 
