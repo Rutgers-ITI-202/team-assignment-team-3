@@ -1,54 +1,47 @@
 package adventure;
 
 public class Room {
-		public static String name = Room.setName();
-		public String roomDescription;
-		public static String item;
-		public arrayList connectingRooms
-		
-		public static String returnName() {
-			return name;
-		}
+	boolean hasitem = true;
 	
-	public static String roomItem(String x){
-		item = x.item;
-		return item;
+	public class YA extends Room{
+		String IdentificationCard = "Name: Jamie Lannister \nDate of Birth: April 01, 1995"
+				+ "\nEye Color: Oh My~ \nSex: Unknown";
+		String Phone = "Model: iPhone 7 (dead batteries)";
 	}
-	
-	public static String roomLook(String x) {
-		
+	public class Bathroom extends Room{
+		String Flashlight = "Nicknamed: Lightsaber.(no batteries)";
 	}
-	
-	public class Room1 extends Room {
-		String name = "Storage Closet";
-		roomDescription = "You look around an empty room. There are not windows or doors, you are trapped here forever.";
-		connectingRooms = ;
-		Item batteries = true;
+	public class Storage extends Room{
+		String Batteries = "Flashlight Batteries. Use to turn on Flashlight (Lightsaber)";
 	}
-	
-	public class Room2 extends Room {
-		String name = "Young Adults Section";
-		public String setName(){
-			return name;
-		}
-		
+	public class Comic extends Room{
+		String BabyRoboticDragon = "Dragons are cool, babies are dumb, if you see a puppy, you better run!";
+		boolean Book = false;
 	}
-	
-	public class Room3 extends Room {
-		String name = "Archives";
+	public class Office extends Room{
+		String Key = "The key to opening the Media Room!";
 	}
-	
-	public class Room4 extends Room {
-		String name = "Elevator";
+	public class Media extends Room{
+		String MasterKey = " You'll need this to swipe open the exit door in the Lobby";
 	}
-	
-	public class Room5 extends Room {
-		String name = "Lobby";
+	public class Children extends Room{
+		String Wallet = " You'll need this to pay for the Uber ride back to Campus";
 	}
-	
-	public class Room6 extends Room {
+	public class Lobby extends Room{
+		boolean Lock = true;
+	}
+	public class Archives extends Room{
+		String Map = "Second Floor:   |Media Room|   <-->   |Comics Section|       <-->    |Librarian's Office|\n"
+				+ "\nFirst Floor:    |Bathroom|     <-->   |Children's Section|   <-->    |Lobby| \n"
+				+ "\nBasement:       |Storage|      <-->   |Young Adults Section| <-->    |Archives|";
+	}
+	public class Hidden_Dungeon extends Room{
 		
 	}
+	public class HydraHeadquarters extends Room{
+		
+	}
+}
 	
 // put descriptions into text files so that it is easier to change them
 
