@@ -39,7 +39,8 @@ public class AdventureModel {
 	}
 	
 	public void look(){
-		
+		room = 
+		System.out.println()
 	}
 	
 	public void pickup(){

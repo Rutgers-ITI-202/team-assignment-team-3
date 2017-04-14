@@ -16,6 +16,7 @@ import java.util.Arrays;
 public class Adventurer extends AdventureModel{
 	private String Inventory[] = new String[8];
 	private Room rooms[] = new Room[11];
+	private String location;
 	
 	private String[] getInventory() {
 		return Inventory;
@@ -30,4 +31,12 @@ public class Adventurer extends AdventureModel{
 	private void setRooms(Room rooms[]) {
 		this.rooms = rooms;
 	} 
+	
+	public static currentRoom() {
+		return location;
+	}
+	
+	public void changeRoom(String x) {
+		location = x;
+	}
 }
