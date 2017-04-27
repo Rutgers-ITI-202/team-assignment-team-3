@@ -31,7 +31,7 @@ public class TextAdventure {
 					condition = true;
 				}
 				
-				else{
+				else{ 
 					condition = false;
 					System.out.println("Sorry, that was an invalid input");
 				}
