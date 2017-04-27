@@ -1,7 +1,8 @@
 /*
 An adventurer has:
 �	A location (some room).
-�	An inventory (the things being carried).  When the player executes the �take thing� command, the item should be added to the inventory.
+�	An inventory (the things being carried).  When the player executes the �take thing� command, 
+	the item should be added to the inventory.
 
 An adventurer can:
 �	Move from room to room.
@@ -16,7 +17,7 @@ import java.util.Arrays;
 public class Adventurer extends AdventureModel{
 	private String Inventory[] = new String[8];
 	private Room rooms[] = new Room[11];
-	private String location;
+	private static String location;
 	
 	private String[] getInventory() {
 		return Inventory;
@@ -32,7 +33,7 @@ public class Adventurer extends AdventureModel{
 		this.rooms = rooms;
 	} 
 	
-	public static currentRoom() {
+	public static String currentRoom() {
 		return location;
 	}
 	
