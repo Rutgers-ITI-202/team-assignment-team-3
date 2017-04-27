@@ -6,4 +6,55 @@ until the night before. Exhausted after a long cram session, you fell asleep in 
 and it is now way pass closing hours. Just your luck, your exam is starting in about an hour and
 if you don't get out of here in time, you're so screwed. Thankfully, you're still carrying your
 backpack but too bad there's nothing in it. The exit door is probably locked and you can't leave
-without your wallet! Objective: Find the MasterKey(to leave) and your Wallet(to pay for the Uber)! 
+without the MasterKey to unlock it! Objective: Find the MasterKey(to leave)!
+
+All progress will be lost. Hope you had fun~ 
+
+YA Look - This is the Young Adults section of the library you were studying in. On the table next to you,
+you see your Identification Card - Name: Jamie Lannister \nDate of Birth: April 01, 1995. 
+You should probably take your Identification Card. Nothing else here seems to be of any use...
+
+YA alt Look - This is the Young Adults section of the library you were studying in. You already took everything.
+
+Storage Look - Hmm...this is the library Storage room. The only things here that are interesting are those
+batteries you see on those shelves to your right! Maybe you can power the flashlight with those!
+
+Storage alt Look - Hmm...this is the library Storage room. You should probably leave before you get sick...
+
+Archive Look - Oh hey! This is the old archive room you used to see your cousin hole up in when she was in
+college! On the wall there in front of you is a map of the entire library! You should probably take it so 
+you don't get lost searching for a way out of those hellhole!
+
+Archive alt Look - Oh hey! This is the old archive room you used to see your cousin hole up in when she was in
+college! You already took the map so there's nothing interesting here...you should probably leave
+
+BR Look - It's the bathroom of the library! What a messy nasty place this is...Oh? You see a flashlight! 
+Too bad it's out of batteries...you should probably still pick up the flashlight just in case~
+
+BR alt Look - It's the bathroom of the library! There's nothing interesting here
+
+Lobby Look - There's the exit! Too bad it's locked...You'll need to find the MasterKey to leave...
+
+Children Look - It's the children's section! The walls are blue and the floor is pink...you see paintings
+of flowers and animals all around. This room disgusts you...after all, you hate kids! Let's leave this
+filty place.
+
+Librarian Look - This is the old hag librarian's office. Ugh..that old bat still hasn't installed a single
+computer in here...other than the mountains of paper everywhere, the only thing that stands out is the Key.
+Too bad it's not the MasterKey you're looking for. You should still take it just in case there's a locked room.
+
+Librarian alt Look - This is the old hag librarian's office. Ugh..that old bat still hasn't installed a single
+computer in here...other than the mountains of paper everywhere, there's nothing here for you to see or take.
+
+Comic Look - This is the room you grew up in. This was your home away from home. Where you read about SuperMan,
+BatMan, and SpiderMan. Currently, the only thing that stands out is that suspicious looking book that doesn't look
+like it should belong in the Comic's Section. Maybe you should pick it up to see what happen...
+
+Comic alt Look -  This is the room you grew up in. This was your home away from home. Where you read about SuperMan,
+BatMan, and SpiderMan. Currently, nothing here seems to be of use to you.
+
+Media Look - In front of you is a bright light! Nested in that light you see the solution to all your problems!
+It's...the MasterKey! Your ticket to GTFO of here!
+
+Media alt Look - In front of you is an ordinary room with ordinary things that are meaningless to you, you already
+have the MasterKey, why are you still here?
