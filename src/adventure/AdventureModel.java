@@ -32,6 +32,23 @@ public class AdventureModel {
 			e.printStackTrace();
 		}
 	}
+		public void datadump(){
+		File inputFile = new File("Descriptions.txt");
+		try{
+			int counter = 0;
+			String input;
+			Scanner in = new Scanner(inputFile);
+			while (in.hasNextLine()){
+				input = in.nextLine();
+				getStorage().add(input);
+				counter++;
+			}
+			in.close();
+		}
+		catch(FileNotFoundException e){
+			e.printStackTrace();
+		}
+	}
 	
 	public void end(){
 		System.out.println("Any progress will be lost. Bye~");
