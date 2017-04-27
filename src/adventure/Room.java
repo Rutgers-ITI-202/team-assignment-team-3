@@ -1,6 +1,11 @@
 package adventure;
 
 public class Room {
+<<<<<<< HEAD
+=======
+		
+	public Room() {
+>>>>>>> origin/master
 		private Boolean location;
 		private Boolean item;
 		private String itemName;
