@@ -30,12 +30,12 @@ Lobby Look - There's the exit! Too bad it's locked...You'll need to find the Mas
 Lobby alt Look - There's the exit! Too bad it's locked...You'll need to find the MasterKey to leave...
 Children Look - What a dull place. All you see is a stupid book on the floor.
 Children Look - What a dull place. You even took the book so there's nothing here.
-Librarian Look - This is the old hag librarian's office.The only thing that stands out is the Key. Too bad it's not the MasterKey.
+Librarian Look - This is the old hag librarian's office. The only thing that stands out is the Key. Too bad it's not the MasterKey.
 
 Librarian alt Look - Other than the mountains of paper everywhere, there's nothing here for you to see or take.
 
-Comic Look - Currently, the only thing that stands out is one of your textbooks.
-
+Comic Look - Currently, the only thing that stands out is a VERY sketchy looking book. Pick it up fool. 
+BOOOM, a magical staircase opens next to you. You can now move down into the secret dungeon!!!
 Comic alt Look -  Currently, nothing here seems to be of use to you.
 
 Media Look - In front of you is a bright light! It's...the MasterKey! Your ticket to GTFO of here!

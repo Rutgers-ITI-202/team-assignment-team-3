@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Adventurer extends AdventureModel{
-	private boolean Inventory[] = new boolean[11];
+	private boolean Inventory[] = new boolean[10];
 	private static ArrayList<String> textfile = new ArrayList<String>();
 	Scanner input = new Scanner(System.in);
 	
@@ -48,8 +48,6 @@ public class Adventurer extends AdventureModel{
 			System.out.println("8: Master Key");
 		if (Inventory[9])
 			System.out.println("9: Sword");
-		if (Inventory[10])
-			System.out.println("10: some useful object");
 	}
 	
 	public Adventurer(){

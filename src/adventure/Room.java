@@ -75,8 +75,6 @@ public interface Room {
 				return new Room9();
 			case 10:
 				return new Room10();
-			case 11:
-				return new Room11();
 			default:
 				System.out.println("No such room.");
 				return null;

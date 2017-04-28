@@ -77,7 +77,10 @@ public class AdventureModel {
 						System.out.println("There is nothing in here to pick up.");
 					else
 						System.out.println("Item added to inventory.");
-						student.getInventory()[currentroom.pickup()] = true; //surround with try/catch - google exception outofbounds error
+						student.getInventory()[currentroom.pickup()] = true; 
+							if (currentroom.getId() == 8) {
+								System.out.println(student.getTextfile().get(37));
+							}//surround with try/catch - google exception outofbounds error
 					break;
 			
 				case "drop":
@@ -124,7 +127,7 @@ public class AdventureModel {
 					if (i != null) {
 						currentroom = i;
 						if (i.getId()==7) {
-							if (!student.getInventory()[1] || !student.getInventory()[5]) {
+							if (!student.getInventory()[0] || !student.getInventory()[5]) {
 								System.out.println("You peek into the doorway only to be enveloped in total darkness, "
 										+ "\nafter banging into what you think is a desk and stubbing your toe you "
 										+ "\neventually give up and go back downstairs");

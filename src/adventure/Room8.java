@@ -16,10 +16,11 @@ public class Room8 implements Room {
 	}
 	
 	public String look(/*adventurer.textfile*/ArrayList<String>Description) {
-		if (item)
+		if (item){
 			return Description.get(36); //line # of description of Room
-		else 
-			return Description.get(38);
+		}
+		else{
+			return Description.get(38);}
 	}
 
 	public int pickup() {
