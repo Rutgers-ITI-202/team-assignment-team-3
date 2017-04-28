@@ -18,24 +18,21 @@ public class AdventureModel {
 	private static Adventurer student = new Adventurer();
 	private static ArrayList<String> textfile = new ArrayList<String>();
 	
-	private static ArrayList<String> getStorage() {
+	public static ArrayList<String> getTextfile() {
 		return textfile;
 	}
-
-	private static void setStorage(ArrayList<String> storage) {
-		textfile = storage;
+	public static void setTextfile(ArrayList<String> textfile) {
+		AdventureModel.textfile = textfile;
 	}
 	
 	public void datadump(){
 		File inputFile = new File("Descriptions.txt");
 		try{
-			int counter = 0;
 			String input;
 			Scanner in = new Scanner(inputFile);
 			while (in.hasNextLine()){
 				input = in.nextLine();
-				getStorage().add(input);
-				counter++;
+				textfile.add(input);
 			}
 			in.close();
 		}
@@ -43,17 +40,47 @@ public class AdventureModel {
 			e.printStackTrace();
 		}
 	}
+	
 	public void beginning(){
 		int num = 0;
 		while(num<=8){
-			System.out.println(textfile.get(num));
+			System.out.println(getTextfile().get(num));
 			num++;
 		}
+		command();
 	}
 	
 	public void end(){
-		System.out.println(textfile.get(10));
+		System.out.println(getTextfile().get(10));
 		System.exit(0);
+	}
+	
+	public void drop(){
+		String name = "";
+		student.removeItem(name);
+	}
+	
+	public void openbag(){
+		student.open();
+	}
+	
+	public void map(){
+		if(student.Inventory.contains("map")){
+			for(int i = 61; i <= 65; i++){
+				System.out.println(getTextfile().get(i));
+			}
+		}
+		else{
+			System.out.println(getTextfile().get(67));
+		}
+	}
+	
+	public void command(){
+		boolean condition = false;
+		while(condition == false){
+			System.out.println(getTextfile().get(76));
+			
+		}
 	}
 	
 	public void look(){
@@ -64,20 +91,7 @@ public class AdventureModel {
 
 	}
 	
-	public void drop(){
-
-	}
-	
-	public void openbag(){
-
-	}
-	
 	public void move(){
 
 	}
-	
-	public void map(){
-
-	}
 }
-
