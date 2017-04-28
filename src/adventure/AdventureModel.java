@@ -44,14 +44,14 @@ public class AdventureModel {
 	public void beginning(){
 		int num = 0;
 		while(num<=8){
-			System.out.println(getTextfile().get(num));
+			System.out.println(textfile.get(num));
 			num++;
 		}
 		command();
 	}
 	
 	public void end(){
-		System.out.println(getTextfile().get(10));
+		System.out.println(textfile.get(10));
 		System.exit(0);
 	}
 	
