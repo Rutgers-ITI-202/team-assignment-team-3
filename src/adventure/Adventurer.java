@@ -26,7 +26,10 @@ public class Adventurer extends AdventureModel{
 	private boolean Inventory[] = new boolean[10];
 	private static ArrayList<String> textfile = new ArrayList<String>();
 	Scanner input = new Scanner(System.in);
-	
+	/**
+	*Set number of max inventory space.
+	*Creates the ArrayList that stores all the text from my Description file.
+	*/
 	public void Inventoryprint(){
 		if (Inventory[0]) //per room
 			System.out.println("0: Batteries");
@@ -48,6 +51,9 @@ public class Adventurer extends AdventureModel{
 			System.out.println("8: Master Key");
 		if (Inventory[9])
 			System.out.println("9: Bloody Textbook");
+	/**
+	*This just prints out the items in your Inventory. So when you want to open bag, this is the method it calls.
+	*/
 	}
 	
 	public Adventurer(){
@@ -67,22 +73,39 @@ public class Adventurer extends AdventureModel{
 		catch(FileNotFoundException e){
 			e.printStackTrace();
 		}
+	/**
+	*Sets all the boolean items in your inventory to false (becomes true when you pick them up)
+	*Loop to import all the Description text to the ArrayList we made above.
+	*Catches for weird errors.
+	*/
 	}
 	
 	public boolean[] getInventory() {
 		return Inventory;
+		/**
+		*@returns Inventory to see if you have the item
+		*/
 	}
 	
 	public void setInventory(boolean inventory[]) {
 		Inventory = inventory;
+		/**
+		*@param Inventory
+		*/
 	}
 	
 	public ArrayList<String> getTextfile() {
 		return textfile;
+		/**
+		*@returns textfile
+		*/
 	}
 	
 	public void setTextfile(ArrayList<String> t) {
 		textfile = t;
+		/**
+		*@param ArrayList textfile
+		*/
 	}
 	
 	public void drop() {
@@ -97,5 +120,8 @@ public class Adventurer extends AdventureModel{
 		if (Inventory[k]) {
 			Inventory[k] = false;
 		}
+		/**
+		*Asks for what item you want to drop. Catches bad input and sets item to false (no longer shows)
+		*/
 	}
 }
