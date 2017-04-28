@@ -1,7 +1,8 @@
+package adventure;
 /*
 This class:
-�	Contains the main method used to start the game.
-�	Talks to the AdventureModel and to the Adventurer classes, as needed.
+	Contains the main method used to start the game.
+	Talks to the AdventureModel and to the Adventurer classes, as needed.
 */
 import java.util.Scanner;
 
@@ -14,10 +15,9 @@ public class TextAdventure {
 		// TODO Auto-generated method stub
 		boolean condition = false;
 		myScanner = new Scanner(System.in);
-		JaimeLannister.datadump();
 		int num = 69;
 		while(num<=74){
-			System.out.println(JaimeLannister.getTextfile().get(num));
+			System.out.println(JaimeLannister.getTextfiles().get(num));
 			num++;
 		}
 		
@@ -47,5 +47,4 @@ public class TextAdventure {
 			}
 		}
 	}
-}
 }
