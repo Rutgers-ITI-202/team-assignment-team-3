@@ -11,6 +11,11 @@ An adventurer can:
 
 package adventure;
 
+/**@author Brandon Cheng, Lauren Richardson, Edwin Zheng
+ * @version 3.0
+ * @since 04/28/2017
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

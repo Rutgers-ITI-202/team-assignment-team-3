@@ -1,4 +1,3 @@
-package adventure;
 /*
 This class:
 �	Creates the Rooms, the Things, and the Adventurer.
@@ -9,6 +8,14 @@ This class:
 	o	As commands are entered, they should be copied to the main text area.
 	o	The method that executes commands should return a String to be displayed in the main text area.
 */
+
+package adventure;
+
+/**@author Brandon Cheng, Lauren Richardson, Edwin Zheng
+ * @version 3.0
+ * @since 04/28/2017
+ */
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;

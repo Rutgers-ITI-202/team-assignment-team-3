@@ -1,10 +1,17 @@
-package adventure;
-import java.util.InputMismatchException;
 /*
 This class:
 	Contains the main method used to start the game.
 	Talks to the AdventureModel and to the Adventurer classes, as needed.
 */
+
+package adventure;
+
+/**@author Brandon Cheng, Lauren Richardson, Edwin Zheng
+ * @version 3.0
+ * @since 04/28/2017
+ */
+import java.util.InputMismatchException;
+
 import java.util.Scanner;
 
 public class TextAdventure {
