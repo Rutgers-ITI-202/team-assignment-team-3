@@ -93,6 +93,7 @@ public class AdventureModel {
 			*Just a loop that makes sure the player always have a command display for as long as they're playing.
 			*Also takes in the user input
 			*/
+			
 			switch(input.toLowerCase()){
 				case "look":
 					System.out.println(currentroom.look(student.getTextfile()) + "\n");
@@ -145,6 +146,7 @@ public class AdventureModel {
 					else 
 						System.out.println("You cannot move in this direction, try again.");
 					break;
+					/**changes currentroom to one on right, if one doesn't exist it prints out an error message**/
 			
 				case "move left":
 					i = currentroom.move(1);
@@ -164,6 +166,8 @@ public class AdventureModel {
 						System.out.println("You cannot move in this direction, try again.");
 					}
 					break;
+					/**changes currentroom to one on left, if one doesn't exist it prints out an error message**/
+					/**Special case for room 9 (Media Lab) which will send you back out unless you have the key**/
 			
 				case "move up":
 					i = currentroom.move(3);
@@ -183,6 +187,8 @@ public class AdventureModel {
 						System.out.println("You cannot move in this direction, try again.");
 					}
 					break;
+					/**changes currentroom to one listed in above value,if one doesn't exist it prints out an error message**/
+					/**Special case for room 7 (Librarian Offices) which will send you back out unless you have the flashlight and batteris**/
 			
 				case "move down":
 					i = currentroom.move(4);
@@ -199,6 +205,8 @@ public class AdventureModel {
 						System.out.println("You cannot move in this direction, try again.");
 					}
 					break;
+					/**changes currentroom to one listed in above value,if one doesn't exist it prints out an error message**/
+					/**Special case for room 4 (Lobby) which will prompt the win method if you return to it with key**/
 			
 				case "map":
 					map();
