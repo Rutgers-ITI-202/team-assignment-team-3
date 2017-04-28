@@ -19,7 +19,9 @@ public interface Room {
 	boolean access = true;
 	
 	default Room move(int direction) {
-		// TODO Auto-generated method stub
+		/**@param direction from AdventureModel
+		 * @return adjacent rooms to AdventureModel
+		 */
 		switch (direction){
 			case 1:
 				if (getLeft()!=-1){
@@ -52,8 +54,11 @@ public interface Room {
 		return null;
 	}
 	
-	//make array of 11 items, put item in index of room
+	// array of 11 items, item in index of corresponding room
 	default Room getRoom(int x){
+		/**@param  index of room
+		 * @return Room to move method
+		 */
 		switch (x){
 			case 1:
 				return new Room1();
