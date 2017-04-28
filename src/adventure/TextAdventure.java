@@ -14,24 +14,28 @@ public class TextAdventure {
 		// TODO Auto-generated method stub
 		boolean condition = false;
 		myScanner = new Scanner(System.in);
-		System.out.println("Welcome To 'Library Escape'!");
-		System.out.println("\nAvailable Commands: [Start Game] [Exit Game]");
+		JaimeLannister.datadump();
+		int num = 69;
+		while(num<=74){
+			System.out.println(JaimeLannister.getTextfile().get(num));
+			num++;
+		}
+		
 		
 		while(condition == false){
 			try{
 				String input = myScanner.nextLine();
-				if(input.equalsIgnoreCase("Start Game")){
+				if(input.equalsIgnoreCase("Start")){
 					condition = true;
-					JaimeLannister.datadump();
 					JaimeLannister.beginning();
 				}
 
-				else if(input.equalsIgnoreCase("Exit Game")){
+				else if(input.equalsIgnoreCase("Exit")){
 					JaimeLannister.end();
 					condition = true;
 				}
 				
-				else{ 
+				else{
 					condition = false;
 					System.out.println("Sorry, that was an invalid input");
 				}
@@ -43,4 +47,5 @@ public class TextAdventure {
 			}
 		}
 	}
+}
 }
