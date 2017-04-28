@@ -54,18 +54,18 @@ public class AdventureModel {
 	
 	public void map(){
 		if(student.getInventory()[2]){
-			for(int i = 61; i <= 65; i++){
+			for(int i = 44; i <= 48; i++){
 				System.out.println(student.getTextfile().get(i));
 			}
 		}
 		else{
-			System.out.println(student.getTextfile().get(67));
+			System.out.println(student.getTextfile().get(50));
 		}
 	}
 	
 	public void command(){
 		while(true){
-			System.out.println(student.getTextfile().get(59));
+			System.out.println(student.getTextfile().get(59)+ "\n");
 			String input = myScanner.nextLine();
 			switch(input.toLowerCase()){
 				case "look":
