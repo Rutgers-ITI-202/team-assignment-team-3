@@ -87,6 +87,19 @@ public class AdventureModel {
 					i = currentroom.move(1);
 					if (i != null)
 						currentroom = i;
+						if (i.getId()==9)
+							if (!student.getInventory()[6]) {
+								System.out.println("You approach the door and turn the knob only to realize "
+										+ "\nthat the door is locked! It looks like you will either need to learn how to"
+										+ "\npick locks or find a key somewhere. You go back into the Comics Section.");
+								i = currentroom.move(2);	
+								}
+						if (i.getId()==4)
+							if (student.getInventory()[8]) {
+								System.out.println("You rush to the front door and use the key, you are free!");
+								//method to end game	
+								}
+						
 					else 
 						System.out.println("You cannot move in this direction, try again.");
 					break;
@@ -95,6 +108,13 @@ public class AdventureModel {
 					i = currentroom.move(3);
 					if (i != null)
 						currentroom = i;
+						if (i.getId()==7)
+							if (!student.getInventory()[1] || !student.getInventory()[6]) {
+								System.out.println("You peek into the doorway only to be enveloped in total darkness, "
+										+ "\nafter banging into what you think is a desk and stubbing your toe you "
+										+ "\neventually give up and go back downstairs");
+								i = currentroom.move(4);
+							}
 					else 
 						System.out.println("You cannot move in this direction, try again.");
 					break;
@@ -115,18 +135,6 @@ public class AdventureModel {
 					System.out.println("Error: Bad input");
 					break;
 			}
-			
-			/*
-			if (currentroom == Room7()) {
-				boolean enter = false;
-				if (!student.getInventory()[1] && !student.getInventory()[6])
-					System.out.println("You peek into the doorway only to be enveloped in total darkness, after banging into what"
-							+ "you think is a desk and stubbing your toe you eventually give up and go back downstairs");
-					currentroom = Room4();
-				else
-					System.out.println("You reach into your bag and pull out the flashlight with it's newly replace batteries."
-							+ "You explore the contents of the room to find" + text file description");
-				*/
 		}
 	}
 }

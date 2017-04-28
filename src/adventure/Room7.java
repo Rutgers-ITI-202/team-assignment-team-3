@@ -44,5 +44,4 @@ public class Room7 implements Room {
 	public int getDown() {
 		return down;
 	}
-	
 }

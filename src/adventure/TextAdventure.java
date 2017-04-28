@@ -1,4 +1,5 @@
 package adventure;
+import java.util.InputMismatchException;
 /*
 This class:
 	Contains the main method used to start the game.
@@ -40,9 +41,14 @@ public class TextAdventure {
 					System.out.println("Sorry, that was an invalid input");
 				}
 			}
+		
+			catch(InputMismatchException e) {
+				System.out.println("Invalid input");
+				condition = false;
+			}
 			
 			catch(Exception e){
-				System.out.println("Sorry, that was an invalid input");
+				System.out.println("Sorry, an error occured");
 				condition = false;
 			}
 		}

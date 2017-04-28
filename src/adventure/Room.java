@@ -11,6 +11,7 @@ public interface Room {
 	public int getRight();
 	public int getUp();
 	public int getDown();
+	boolean access = true;
 	
 	default Room move(int direction) {
 		// TODO Auto-generated method stub
