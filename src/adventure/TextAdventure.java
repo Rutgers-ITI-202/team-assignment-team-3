@@ -16,8 +16,8 @@ public class TextAdventure {
 		// TODO Auto-generated method stub
 		boolean condition = false;
 		myScanner = new Scanner(System.in);
-		int num = 69;
-		while(num<=74){
+		int num = 52;
+		while(num<=58){
 			System.out.println(JaimeLannister.getTextfiles().get(num));
 			num++;
 		}

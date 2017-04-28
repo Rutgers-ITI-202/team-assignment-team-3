@@ -8,7 +8,7 @@ your exam is starting in about an hour and if you don't get out of here in time,
 Thankfully, you're still carrying your backpack but too bad there's nothing in it. The exit door is 
 probably locked and you can't leave without the MasterKey to unlock it! Objective: Find the MasterKey(to leave)! 
 
-All progress will be lost. Hope you had fun~ 
+Your progress will be lost. Hope you had fun~ 
 
 "On the table next to you, you see Textbook 'Java Essentials'. You should probably take that."
 

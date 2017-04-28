@@ -58,7 +58,7 @@ public class AdventureModel {
 	
 	public void command(){
 		while(true){
-			System.out.println(student.getTextfile().get(76));
+			System.out.println(student.getTextfile().get(59));
 			String input = myScanner.nextLine();
 			switch(input.toLowerCase()){
 				case "look":
@@ -66,7 +66,11 @@ public class AdventureModel {
 					break;
 					
 				case "pick up":
-					student.getInventory()[currentroom.pickup()] = true; //surround with try/catch - google exception outofbounds error
+					if (student.getInventory()[currentroom.pickup()] == true)
+						System.out.println("There is nothing in here to pick up.");
+					else
+						System.out.println("Item added to inventory.");
+						student.getInventory()[currentroom.pickup()] = true; //surround with try/catch - google exception outofbounds error
 					break;
 			
 				case "drop":
@@ -92,46 +96,54 @@ public class AdventureModel {
 			
 				case "move left":
 					i = currentroom.move(1);
-					if (i != null)
+					if (i != null) {
 						currentroom = i;
-						if (i.getId()==9)
+						if (i.getId()==9) {
 							if (!student.getInventory()[6]) {
 								System.out.println("You approach the door and turn the knob only to realize "
 										+ "\nthat the door is locked! It looks like you will either need to learn how to"
 										+ "\npick locks or find a key somewhere. You go back into the Comics Section.");
 								i = currentroom.move(2);	
 								}
-						if (i.getId()==4)
-							if (student.getInventory()[8]) {
-								System.out.println("You rush to the front door and use the key, you are free!");
-								win();	
-								}
-						
-					else 
+						}
+					}
+					else {
 						System.out.println("You cannot move in this direction, try again.");
+					}
 					break;
 			
 				case "move up":
 					i = currentroom.move(3);
-					if (i != null)
+					if (i != null) {
 						currentroom = i;
-						if (i.getId()==7)
-							if (!student.getInventory()[1] || !student.getInventory()[6]) {
+						if (i.getId()==7) {
+							if (!student.getInventory()[1] || !student.getInventory()[5]) {
 								System.out.println("You peek into the doorway only to be enveloped in total darkness, "
 										+ "\nafter banging into what you think is a desk and stubbing your toe you "
 										+ "\neventually give up and go back downstairs");
 								i = currentroom.move(4);
 							}
-					else 
+						}
+					}
+					else {
 						System.out.println("You cannot move in this direction, try again.");
+					}
 					break;
 			
 				case "move down":
 					i = currentroom.move(4);
-					if (i != null)
+					if (i != null) {
 						currentroom = i;
-					else 
+						if (i.getId()==4) {
+							if (student.getInventory()[8]) {
+								System.out.println("You rush to the front door and use the key, you are free!");
+								win();	
+								}
+							}
+						}
+					else {
 						System.out.println("You cannot move in this direction, try again.");
+					}
 					break;
 			
 				case "Map":
