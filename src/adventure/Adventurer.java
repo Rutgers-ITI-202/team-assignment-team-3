@@ -3,7 +3,6 @@ An adventurer has:
 �	A location (some room).
 �	An inventory (the things being carried).  When the player executes the �take thing� command, 
 	the item should be added to the inventory.
-
 An adventurer can:
 �	Move from room to room.
 �	Carry a number of objects.
@@ -12,11 +11,30 @@ An adventurer can:
 
 package adventure;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-private static ArrayList<String> textfile = new ArrayList<String>();
 
-	public void datadump(){
+public class Adventurer extends AdventureModel{
+	private boolean Inventory[] = new boolean[11];
+	private static ArrayList<String> textfile = new ArrayList<String>();
+	Scanner input = new Scanner(System.in);
+	
+	public void Inventoryprint(){
+		if(Inventory[0]) //per room
+		System.out.println("0: Batteries");
+		if(Inventory[1])
+		System.out.println("1: Flashlight");
+		if(Inventory[2])
+		System.out.println("2: Book"); //etc etc
+	}
+	
+	public Adventurer(){
+		for(boolean i:Inventory)
+			i = false;
+		
 		File inputFile = new File("Descriptions.txt");
 		try{
 			String input;
@@ -31,31 +49,34 @@ private static ArrayList<String> textfile = new ArrayList<String>();
 			e.printStackTrace();
 		}
 	}
-
-public class Adventurer extends AdventureModel{
-	private String Inventory[] = new String[8];
-	private Room rooms[] = new Room[11];
-	private static String location;
 	
-	private String[] getInventory() {
+	public boolean[] getInventory() {
 		return Inventory;
 	}
-	private void setInventory(String inventory[]) {
+	
+	public void setInventory(boolean inventory[]) {
 		Inventory = inventory;
 	}
-
-	private Room[] getRooms() {
-		return rooms;
-	}
-	private void setRooms(Room rooms[]) {
-		this.rooms = rooms;
-	} 
 	
-	public static String currentRoom() {
-		return location;
+	public ArrayList<String> getTextfile() {
+		return textfile;
 	}
 	
-	public void changeRoom(String x) {
-		location = x;
+	public void setTextfile(ArrayList<String> t) {
+		textfile = t;
+	}
+	
+	public void drop() {
+		Inventoryprint();
+		System.out.println("Please enter the number of item in your inventory that you would like to drop:");
+		int k = input.nextInt();
+		if (k < 0 || k >= 11) {
+			System.out.println("You entered a bad value boo, try again");
+			drop();
+			return;
+		}
+		if (Inventory[k]) {
+			Inventory[k] = false;
+		}
 	}
 }
