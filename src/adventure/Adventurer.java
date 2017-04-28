@@ -43,11 +43,11 @@ public class Adventurer extends AdventureModel{
 		if (Inventory[6])
 			System.out.println("6: Key");
 		if (Inventory[7])
-			System.out.println("7: Sketchy Textbook");
+			System.out.println("7: Sketchy Book");
 		if (Inventory[8])
 			System.out.println("8: Master Key");
 		if (Inventory[9])
-			System.out.println("9: Sword");
+			System.out.println("9: Bloody Textbook");
 	}
 	
 	public Adventurer(){
