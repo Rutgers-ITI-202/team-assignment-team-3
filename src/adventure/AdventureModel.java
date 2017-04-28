@@ -115,6 +115,18 @@ public class AdventureModel {
 					System.out.println("Error: Bad input");
 					break;
 			}
+			
+			/*
+			if (currentroom == Room7()) {
+				boolean enter = false;
+				if (!student.getInventory()[1] && !student.getInventory()[6])
+					System.out.println("You peek into the doorway only to be enveloped in total darkness, after banging into what"
+							+ "you think is a desk and stubbing your toe you eventually give up and go back downstairs");
+					currentroom = Room4();
+				else
+					System.out.println("You reach into your bag and pull out the flashlight with it's newly replace batteries."
+							+ "You explore the contents of the room to find" + text file description");
+				*/
 		}
 	}
 }
