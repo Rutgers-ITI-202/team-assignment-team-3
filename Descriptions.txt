@@ -8,9 +8,9 @@ your exam is starting in about an hour and if you don't get out of here in time,
 Thankfully, you're still carrying your backpack but too bad there's nothing in it. The exit door is 
 probably locked and you can't leave without the MasterKey to unlock it! Objective: Find the MasterKey(to leave)! 
 
-Your progress will be lost. Hope you had fun~ 
+All progress will be lost. Hope you had fun~ 
 
-"On the table next to you, you see Textbook 'Java Essentials'. You should probably take that."
+On the table next to you, you see Textbook 'Java Essentials'. You should probably take that.
 
 YA alt Look - This is the Young Adults section of the library you were studying in. You already took everything.
 
@@ -26,10 +26,10 @@ BR Look - What a messy nasty place this is...Oh? You see a flashlight! Too bad i
 
 BR alt Look - It's the bathroom of the library! There's nothing interesting here
 
-Lobby Look - There's the exit! Too bad it's locked...You'll need to find the MasterKey to leave...
-
-Children Look - 
-
+Lobby Look - There's the exit! Too bad it's locked...You'll need to find the MasterKey to leave...At least there's a book to take
+Lobby alt Look - There's the exit! Too bad it's locked...You'll need to find the MasterKey to leave...
+Children Look - What a dull place. All you see is a stupid book on the floor.
+Children Look - What a dull place. You even took the book so there's nothing here.
 Librarian Look - This is the old hag librarian's office.The only thing that stands out is the Key. Too bad it's not the MasterKey.
 
 Librarian alt Look - Other than the mountains of paper everywhere, there's nothing here for you to see or take.
@@ -58,3 +58,6 @@ Interactive items are surrounded by '[ ]' and commands/options must typed out.
 Options:	         [ Start ]            [ Exit ]
 
 Command Options:  [Look]  [Pick Up]  [Drop]  [Open Bag]  [Move Right]  [Move Left]  [Move Up]  [Move Down]  [Map]  [End] 
+You see a bloody corpse! Run for your life! Leave immediately! Oh wait, there's a sword on the floor, pick it up!
+
+The corpse is still there. Why are you still here you bloody creep. Leave already...You already took the sword.
