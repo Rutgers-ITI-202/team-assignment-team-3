@@ -11,7 +11,7 @@ probably locked and you can't leave without the MasterKey to unlock it! Objectiv
 All progress will be lost. Hope you had fun~ 
 
 YA Look - This is the Young Adults section of the library you were studying in. On the table next to you,
-you see your Identification Card - Name: Jamie Lannister \nDate of Birth: April 01, 1995. 
+you see your Identification Card - Name: Jamie Lannister / Date of Birth: April 01, 1023. 
 You should probably take your Identification Card. Nothing else here seems to be of any use...
 
 YA alt Look - This is the Young Adults section of the library you were studying in. You already took everything.
@@ -58,3 +58,20 @@ It's...the MasterKey! Your ticket to GTFO of here!
 
 Media alt Look - In front of you is an ordinary room with ordinary things that are meaningless to you, you already
 have the MasterKey, why are you still here?
+
+Second Floor:   |Media Room|   <-->   |Comics Section|       <-->    |Librarian's Office|
+
+First Floor:    |Bathroom|     <-->   |Children's Section|   <-->    |Lobby|
+
+Basement:       |Storage|      <-->   |Young Adults Section| <-->    |Archives|
+
+You have no map! How the bloody hell do you expect to look at the map if you ain't got it?! Go get the damn map first!
+
+Welcome to 'Library Escape"! Library Escape is a text adventure game where the player takes on the role of a 
+student stuck inside a locked Library. The objective of the game is to get the item [MasterKey], hidden somewhere
+in the library, to unlock the front exit in the lobby and escape!
+
+Interactive items are surrounded by '[ ]' and commands/options must typed out.
+Options:	         [ Start ]            [ Exit ]
+
+Command Options:  [ Look ]  [ Pick Up ]  [ Drop ]  [ Open Bag ]  [ End ]  [ Move Right ]  [ Move Left ]
