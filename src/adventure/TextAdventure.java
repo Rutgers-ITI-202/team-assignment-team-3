@@ -24,7 +24,7 @@ public class TextAdventure {
 		boolean condition = false;
 		myScanner = new Scanner(System.in);
 		int num = 52;
-		while(num<=58){
+		while(num<=57){
 			System.out.println(JaimeLannister.getTextfiles().get(num));
 			num++;
 		}
