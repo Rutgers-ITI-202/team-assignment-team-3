@@ -13,6 +13,24 @@ An adventurer can:
 package adventure;
 
 import java.util.Arrays;
+import java.util.Scanner;
+private static ArrayList<String> textfile = new ArrayList<String>();
+
+	public void datadump(){
+		File inputFile = new File("Descriptions.txt");
+		try{
+			String input;
+			Scanner in = new Scanner(inputFile);
+			while (in.hasNextLine()){
+				input = in.nextLine();
+				textfile.add(input);
+			}
+			in.close();
+		}
+		catch(FileNotFoundException e){
+			e.printStackTrace();
+		}
+	}
 
 public class Adventurer extends AdventureModel{
 	private String Inventory[] = new String[8];
