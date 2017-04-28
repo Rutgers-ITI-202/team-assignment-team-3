@@ -54,48 +54,58 @@ public class AdventureModel {
 			System.out.println(student.getTextfile().get(76));
 			String input = myScanner.nextLine();
 			switch(input.toLowerCase()){
-			case "look":
-				System.out.println(currentroom.look(student.getTextfile()));
-				break;
-			case "pick up":
-				student.getInventory()[currentroom.pickup()] = true; //surround with try/catch - google exception outofbounds error
-				break;
-			case "drop":
-				//student.getInventory()[currentroom.getId()] = false; //surround with try/catch
-				student.drop();
-				break;
-			case "open bag":
-				student.Inventoryprint();
-				break;
-			case "end":
-				end();
-				break;
-			case "move right":
-				Room i = currentroom.move(2);
-				if (i != null)
-					currentroom = i;
-				break;
-			case "move left":
-				i = currentroom.move(1);
-				if (i != null)
-					currentroom = i;
-				break;
-			case "move up":
-				i = currentroom.move(3);
-				if (i != null)
-					currentroom = i;
-				break;
-			case "move down":
-				i = currentroom.move(4);
-				if (i != null)
-					currentroom = i;
-				break;
-			case "Map":
-				map();
-				break;
-			default:
-				System.out.println("Error: Bad input");
-				break;
+				case "look":
+					System.out.println(currentroom.look(student.getTextfile()));
+					break;
+					
+				case "pick up":
+					student.getInventory()[currentroom.pickup()] = true; //surround with try/catch - google exception outofbounds error
+					break;
+			
+				case "drop":
+					//surround with try/catch
+					student.drop();
+					break;
+			
+				case "open bag":
+					student.Inventoryprint();
+					break;
+			
+				case "end":
+					end();
+					break;
+			
+				case "move right":
+					Room i = currentroom.move(2);
+					if (i != null)
+						currentroom = i;
+					break;
+			
+				case "move left":
+					i = currentroom.move(1);
+					if (i != null)
+						currentroom = i;
+					break;
+			
+				case "move up":
+					i = currentroom.move(3);
+					if (i != null)
+						currentroom = i;
+					break;
+			
+				case "move down":
+					i = currentroom.move(4);
+					if (i != null)
+						currentroom = i;
+					break;
+			
+				case "Map":
+					map();
+					break;
+			
+				default:
+					System.out.println("Error: Bad input");
+					break;
 			}
 		}
 	}

@@ -23,12 +23,28 @@ public class Adventurer extends AdventureModel{
 	Scanner input = new Scanner(System.in);
 	
 	public void Inventoryprint(){
-		if(Inventory[0]) //per room
-		System.out.println("0: Batteries");
-		if(Inventory[1])
-		System.out.println("1: Flashlight");
-		if(Inventory[2])
-		System.out.println("2: Book"); //etc etc
+		if (Inventory[0]) //per room
+			System.out.println("0: Batteries");
+		if (Inventory[1])
+			System.out.println("1: Textbook 'Java Essentials'");
+		if (Inventory[2])
+			System.out.println("2: Map"); 
+		if (Inventory[3])
+			System.out.println("3: Textbook 'Headfirst Java'");
+		if (Inventory[4])
+			System.out.println("4: Textbook 'Object-Oriented Design'");
+		if (Inventory[5])
+			System.out.println("5: Flashlight");
+		if (Inventory[6])
+			System.out.println("6: Key");
+		if (Inventory[7])
+			System.out.println("7: Generic Textbook");
+		if (Inventory[8])
+			System.out.println("8: Master Key");
+		if (Inventory[9])
+			System.out.println("9: Sword");
+		if (Inventory[10])
+			System.out.println("10: some useful object");
 	}
 	
 	public Adventurer(){

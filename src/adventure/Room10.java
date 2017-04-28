@@ -4,46 +4,46 @@ import java.util.ArrayList;
 
 public class Room10 implements Room {
 
-	@Override
-	public String look(ArrayList<String> Description) {
-		// TODO Auto-generated method stub
-		return null;
+	int left = -1;
+	int right = -1;
+	int up = 8;
+	int down = -1;
+	int id = 10;
+	boolean item = true;
+	
+	public Room10(){
+		System.out.println("-------You have entered the Secret Dungeon!-------");
+	}
+	
+	public String look(/*adventurer.textfile*/ArrayList<String>Description) {
+		if (item)
+			return Description.get(0); //line # of description of Room
+		else 
+			return Description.get(1);
 	}
 
-	@Override
 	public int pickup() {
-		// TODO Auto-generated method stub
-		return 0;
+		item = false; //gets item and returns index of arraylist adventurer.getbag.set(Room1.pickup(), true)
+		return getId();
 	}
-
-	@Override
 	public int getId() {
-		// TODO Auto-generated method stub
-		return 0;
+		return id;
 	}
-
-	@Override
 	public int getLeft() {
-		// TODO Auto-generated method stub
-		return 0;
+		return left;
 	}
 
-	@Override
 	public int getRight() {
-		// TODO Auto-generated method stub
-		return 0;
+		return right;
 	}
 
-	@Override
 	public int getUp() {
-		// TODO Auto-generated method stub
-		return 0;
+		return up;
 	}
 
-	@Override
 	public int getDown() {
-		// TODO Auto-generated method stub
-		return 0;
+		return down;
 	}
-
+	
 }
+

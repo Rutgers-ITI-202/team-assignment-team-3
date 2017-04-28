@@ -4,18 +4,15 @@ import java.util.ArrayList;
 
 public class Room4 implements Room {
 
-
-	int left = -1;
+	int left = 5;
 	int right = -1;
-	int up = -1;
-	int down = -1;
+	int up = 7;
+	int down = 3;
 	int id = 4;
 	boolean item = true;
 	
 	public Room4(){
-		id = 2; //adventurer.getbag().set(Room.getid(),true)
-		right = 3;
-		left = 1;
+		System.out.println("-------You have entered the Main Lobby-------");
 	}
 	
 	public String look(/*adventurer.textfile*/ArrayList<String>Description) {

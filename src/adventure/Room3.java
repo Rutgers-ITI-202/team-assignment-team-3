@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Room3 implements Room {
 
-
 	int left = 2;
 	int right = -1;
 	int up = 4;
@@ -13,6 +12,7 @@ public class Room3 implements Room {
 	boolean item = true;
 	
 	public Room3(){
+		System.out.println("-------You have entered the Archive Room-------");
 	}
 	
 	public String look(/*adventurer.textfile*/ArrayList<String>Description) {
