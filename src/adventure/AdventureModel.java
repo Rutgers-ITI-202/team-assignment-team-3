@@ -1,3 +1,4 @@
+package adventure;
 /*
 This class:
 �	Creates the Rooms, the Things, and the Adventurer.
@@ -15,83 +16,87 @@ import java.io.FileNotFoundException;
 
 
 public class AdventureModel {
+	private Room currentroom;
+	private Scanner myScanner = new Scanner(System.in);
 	private static Adventurer student = new Adventurer();
-	private static ArrayList<String> textfile = new ArrayList<String>();
 	
-	public static ArrayList<String> getTextfile() {
-		return textfile;
+	public ArrayList<String> getTextfiles() {
+		return student.getTextfile();
 	}
-	public static void setTextfile(ArrayList<String> textfile) {
-		AdventureModel.textfile = textfile;
-	}
-	
-	public void datadump(){
-		File inputFile = new File("Descriptions.txt");
-		try{
-			String input;
-			Scanner in = new Scanner(inputFile);
-			while (in.hasNextLine()){
-				input = in.nextLine();
-				textfile.add(input);
-			}
-			in.close();
-		}
-		catch(FileNotFoundException e){
-			e.printStackTrace();
-		}
-	}
-	
 	public void beginning(){
 		int num = 0;
 		while(num<=8){
-			System.out.println(textfile.get(num));
+			System.out.println(student.getTextfile().get(num));
 			num++;
 		}
+		currentroom = new Room2();
 		command();
 	}
 	
 	public void end(){
-		System.out.println(textfile.get(10));
+		System.out.println(student.getTextfile().get(10));
 		System.exit(0);
 	}
 	
-	public void drop(){
-		String name = "";
-		student.removeItem(name);
-	}
-	
-	public void openbag(){
-		student.open();
-	}
-	
 	public void map(){
-		if(student.Inventory.contains("map")){
+		if(student.getInventory()[2]){
 			for(int i = 61; i <= 65; i++){
-				System.out.println(getTextfile().get(i));
+				System.out.println(student.getTextfile().get(i));
 			}
 		}
 		else{
-			System.out.println(getTextfile().get(67));
+			System.out.println(student.getTextfile().get(67));
 		}
 	}
 	
 	public void command(){
-		boolean condition = false;
-		while(condition == false){
-			System.out.println(getTextfile().get(76));
-			
+		while(true){
+			System.out.println(student.getTextfile().get(76));
+			String input = myScanner.nextLine();
+			switch(input.toLowerCase()){
+			case "look":
+				System.out.println(currentroom.look(student.getTextfile()));
+				break;
+			case "pick up":
+				student.getInventory()[currentroom.pickup()] = true; //surround with try/catch - google exception outofbounds error
+				break;
+			case "drop":
+				//student.getInventory()[currentroom.getId()] = false; //surround with try/catch
+				student.drop();
+				break;
+			case "open bag":
+				student.Inventoryprint();
+				break;
+			case "end":
+				end();
+				break;
+			case "move right":
+				Room i = currentroom.move(2);
+				if (i != null)
+					currentroom = i;
+				break;
+			case "move left":
+				i = currentroom.move(1);
+				if (i != null)
+					currentroom = i;
+				break;
+			case "move up":
+				i = currentroom.move(3);
+				if (i != null)
+					currentroom = i;
+				break;
+			case "move down":
+				i = currentroom.move(4);
+				if (i != null)
+					currentroom = i;
+				break;
+			case "Map":
+				map();
+				break;
+			default:
+				System.out.println("Error: Bad input");
+				break;
+			}
 		}
-	}
-	
-	public void look(){
-		
-	}
-	
-	public void pickup(){
-
-	}
-	
-	public void move(){
-
 	}
 }
