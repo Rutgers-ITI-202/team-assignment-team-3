@@ -1,124 +1,75 @@
 package adventure;
 
-import adventure.Room.SuperRoom;
+import java.util.ArrayList;
 
-public class Room {
+public interface Room {
+
+	public String look(/*adventurer.textfile*/ArrayList<String>Description);
+	public int pickup();
+	public int getId();
+	public int getLeft();
+	public int getRight();
+	public int getUp();
+	public int getDown();
 	
-	class SuperRoom {
-		Boolean location;
-		Boolean item;
-		String itemName;
-		String itemDescription;
-		String description;
-		String altDescription;
-		public String getName() {
-			return itemName;
+	default Room move(int direction) {
+		// TODO Auto-generated method stub
+		switch (direction){
+		case 1:
+			if (getLeft()!=-1){
+				return getRoom(getLeft());
+			}
+			break;
+		case 2:
+			if (getRight()!=-1){
+				return getRoom(getRight());
+			}
+			break;
+		case 3:
+			if (getUp()!=-1){
+				return getRoom(getUp());
+			}
+			break;
+		case 4:
+			if (getDown()!=-1){
+				return getRoom(getDown());
+			}
+			break;
+		default:
+			System.out.println("You cannot move in this direction");
+			return null;
 		}
+		return null;
 	}
 	
-	class YA extends SuperRoom {{
-		location = false;
-		item = true;
-		itemName = "Identification Card";
-		itemDescription = "Name: Jamie Lannister \nDate of Birth: April 01, 1995"
-				+ "\nEye Color: Oh My~ \nSex: Unknown";
-		description = "";
-		altDescription = "";
-		String Phone = "Model: iPhone 7 (dead batteries)";
-	}}
-	
-	class Storage extends SuperRoom {{
-		location = false;
-		item = true;
-		itemName = "Batteries";
-		itemDescription = "Flashlight Batteries. Use to turn on Flashlight (Lightsaber)";
-		description = "";
-		altDescription = "";
-	}}
-	
-	public class Archives extends SuperRoom {{
-		location = false;
-		item = true;
-		itemName = "Map";
-		itemDescription = "Second Floor:   |Media Room|   <-->   |Comics Section|       <-->    |Librarian's Office|\n"
-				+ "\nFirst Floor:    |Bathroom|     <-->   |Children's Section|   <-->    |Lobby| \n"
-				+ "\nBasement:       |Storage|      <-->   |Young Adults Section| <-->    |Archives|";
-		description = "";
-		altDescription = "";
-	}}
-	
-	public class Elevator extends SuperRoom {{
-		location = false;
-		item = false;
-		description = "";
-	}}
-	
-	public class Lobby extends SuperRoom {{
-		location = false;
-		description = "";
-		boolean Lock = true;
-	}}
-	
-	public class Children extends SuperRoom {{
-		location = false;
-		item = true;
-		itemName = "Wallet";
-		itemDescription = "You'll need this to pay for the Uber ride back to Campus";
-		description = "";
-		altDescription = "";
-	}}
-	
-	public class Bathroom extends SuperRoom {{
-		location = false;
-		item = true;
-		itemName = "Flashlight";
-		itemDescription = "Nicknamed: Lightsaber.(no batteries)";
-		description = "";
-		altDescription = "";
-	}}
-	
-	public class Office extends SuperRoom {{
-		location = false;
-		item = true;
-		itemName = "Key";
-		itemDescription = "The key to opening the Media Room!";
-		description = "";
-		altDescription = "";
-	}}
-	
-	public class Comic extends SuperRoom {{
-		location = false;
-		item = true;
-		itemName = "Book";
-		itemDescription = "";
-		description = "";
-		altDescription = "";
-	}}
-
-	public class Media extends SuperRoom {{
-		location = false;
-		item = true;
-		itemName = "MasterKey";
-		itemDescription = " You'll need this to swipe open the exit door in the Lobby";
-		description = "";
-		altDescription = "";
-	}}
-	
-	public class Hidden_Dungeon extends SuperRoom {{
-		location = false;
-		item = true;
-		itemName = "BabyRoboticDragon";
-		itemDescription = "Dragons are cool, babies are dumb, if you see a puppy, you better run!";
-		description = "";
-		altDescription = "";
-	}}
-	
-	public class StormTrooperRoom extends SuperRoom {{
-		location = false;
-		item = true;
-		itemName = "";
-		itemDescription = "";
-		description = "";
-		altDescription = "";
-	}}
+	//make array of 11 items, put item in index of room
+	default Room getRoom(int x){
+		switch (x){
+			case 1:
+				return new Room1();
+			case 2:
+				return new Room2();
+			case 3:
+				return new Room3();
+			case 4:
+				return new Room4();
+			case 5:
+				return new Room5();
+			case 6:
+				return new Room6();
+			case 7:
+				return new Room7();
+			case 8:
+				return new Room8();
+			case 9:
+				return new Room9();
+			case 10:
+				return new Room10();
+			case 11:
+				return new Room11();
+			default:
+				System.out.println("No such room.");
+				return null;
+		}
+	}
 }
