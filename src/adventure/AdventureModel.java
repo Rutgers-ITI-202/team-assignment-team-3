@@ -33,6 +33,13 @@ public class AdventureModel {
 		command();
 	}
 	
+	public void win(){
+		System.out.println("Congratulations, you have successfully escaped the library!");
+		if (student.getInventory()[1] && student.getInventory()[3] && student.getInventory()[4] && student.getInventory()[7])
+			System.out.println("You were smart to collect all those textbooks, you aslo managed to get an A+ on your exam!");
+		end();
+	}
+	
 	public void end(){
 		System.out.println(student.getTextfile().get(10));
 		System.exit(0);
@@ -97,7 +104,7 @@ public class AdventureModel {
 						if (i.getId()==4)
 							if (student.getInventory()[8]) {
 								System.out.println("You rush to the front door and use the key, you are free!");
-								//method to end game	
+								win();	
 								}
 						
 					else 
