@@ -11,14 +11,14 @@ public class Room1 implements Room{
 	boolean item = true;
 	
 	public Room1(){
-		System.out.println("\n----------You have entered the Storage Room----------");
+		System.out.println("\n----------You have entered the Storage Room----------\n");
 	}
 	
 	public String look(/*adventurer.textfile*/ArrayList<String>Description) {
 		if (item)
-			return Description.get(13); //line # of description of Room
+			return Description.get(16); //line # of description of Room
 		else 
-			return Description.get(1);
+			return Description.get(18);
 	}
 
 	public int pickup() {
