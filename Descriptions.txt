@@ -58,6 +58,6 @@ Interactive items are surrounded by '[ ]' and commands/options must typed out.
 Options:	         [ Start ]            [ Exit ]
 
 Command Options:  [Look]  [Pick Up]  [Drop]  [Open Bag]  [Move Right]  [Move Left]  [Move Up]  [Move Down]  [Map]  [End] 
-You see a bloody corpse! Run for your life! Leave immediately! Oh wait, there's a sword on the floor, pick it up!
+You see a bloody corpse clutching a O-OP study guide! Leave immediately! Oh wait, there's a sword on the floor, pick it up!
 
 The corpse is still there. Why are you still here you bloody creep. Leave already...You already took the sword.

@@ -1,5 +1,10 @@
 package adventure;
 
+/**@author Brandon Cheng, Lauren Richardson, Edwin Zheng
+ * @version 3.0
+ * @since 04/28/2017
+ */
+
 import java.util.ArrayList;
 
 public class Room2 implements Room {
