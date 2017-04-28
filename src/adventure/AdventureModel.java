@@ -57,9 +57,10 @@ public class AdventureModel {
 			for(int i = 44; i <= 48; i++){
 				System.out.println(student.getTextfile().get(i));
 			}
+			System.out.println();
 		}
 		else{
-			System.out.println(student.getTextfile().get(50));
+			System.out.println(student.getTextfile().get(50)+ "\n");
 		}
 	}
 	
@@ -69,17 +70,17 @@ public class AdventureModel {
 			String input = myScanner.nextLine();
 			switch(input.toLowerCase()){
 				case "look":
-					System.out.println(currentroom.look(student.getTextfile()));
+					System.out.println(currentroom.look(student.getTextfile()) + "\n");
 					break;
 					
 				case "pick up":
 					if (student.getInventory()[currentroom.pickup()] == true)
-						System.out.println("There is nothing in here to pick up.");
+						System.out.println("There is nothing in here to pick up."+ "\n");
 					else
-						System.out.println("Item added to inventory.");
+						System.out.println("Item added to inventory."+ "\n");
 						student.getInventory()[currentroom.pickup()] = true; 
 							if (currentroom.getId() == 8) {
-								System.out.println(student.getTextfile().get(37));
+								System.out.println(student.getTextfile().get(37)+ "\n");
 							}//surround with try/catch - google exception outofbounds error
 					break;
 			
@@ -90,6 +91,7 @@ public class AdventureModel {
 			
 				case "open bag":
 					student.Inventoryprint();
+					System.out.println();
 					break;
 			
 				case "end":
@@ -113,7 +115,8 @@ public class AdventureModel {
 								System.out.println("You approach the door and turn the knob only to realize "
 										+ "\nthat the door is locked! It looks like you will either need to learn how to"
 										+ "\npick locks or find a key somewhere. You go back into the Comics Section.");
-								i = currentroom.move(2);	
+								i = currentroom.move(2);
+								currentroom = i;
 								}
 						}
 					}
@@ -132,6 +135,7 @@ public class AdventureModel {
 										+ "\nafter banging into what you think is a desk and stubbing your toe you "
 										+ "\neventually give up and go back downstairs");
 								i = currentroom.move(4);
+								currentroom = i;
 							}
 						}
 					}
@@ -156,7 +160,7 @@ public class AdventureModel {
 					}
 					break;
 			
-				case "Map":
+				case "map":
 					map();
 					break;
 			
