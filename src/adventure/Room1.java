@@ -23,7 +23,7 @@ public class Room1 implements Room{
 
 	public int pickup() {
 		item = false; //gets item and returns index of arraylist adventurer.getbag.set(Room1.pickup(), true)
-		return getId();
+		return getId() - 1;
 	}
 	public int getId() {
 		return id;
