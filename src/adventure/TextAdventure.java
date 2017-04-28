@@ -28,7 +28,9 @@ public class TextAdventure {
 			System.out.println(JaimeLannister.getTextfiles().get(num));
 			num++;
 		}
-		
+		/**
+		*This is prints the Welcome statement and purpose of the game
+		*/
 		
 		while(condition == false){
 			try{
@@ -48,6 +50,9 @@ public class TextAdventure {
 					System.out.println("Sorry, that was an invalid input");
 				}
 			}
+			/**
+			*This while loop asks the student whether or not they want to play the game.
+			*/
 		
 			catch(InputMismatchException e) {
 				System.out.println("Invalid input");
@@ -58,6 +63,9 @@ public class TextAdventure {
 				System.out.println("Sorry, an error occured");
 				condition = false;
 			}
+			/**
+			*Try catch statements used to check for error (though I don't think we actually need them)
+			*/
 		}
 	}
 }
