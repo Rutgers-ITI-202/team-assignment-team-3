@@ -17,9 +17,9 @@ public class Room2 implements Room {
 	
 	public String look(/*adventurer.textfile*/ArrayList<String>Description) {
 		if (item)
-			return Description.get(0); //line # of description of Room
+			return Description.get(12); //line # of description of Room
 		else 
-			return Description.get(1);
+			return Description.get(14);
 	}
 
 	public int pickup() {
