@@ -79,24 +79,32 @@ public class AdventureModel {
 					Room i = currentroom.move(2);
 					if (i != null)
 						currentroom = i;
+					else 
+						System.out.println("You cannot move in this direction, try again.");
 					break;
 			
 				case "move left":
 					i = currentroom.move(1);
 					if (i != null)
 						currentroom = i;
+					else 
+						System.out.println("You cannot move in this direction, try again.");
 					break;
 			
 				case "move up":
 					i = currentroom.move(3);
 					if (i != null)
 						currentroom = i;
+					else 
+						System.out.println("You cannot move in this direction, try again.");
 					break;
 			
 				case "move down":
 					i = currentroom.move(4);
 					if (i != null)
 						currentroom = i;
+					else 
+						System.out.println("You cannot move in this direction, try again.");
 					break;
 			
 				case "Map":

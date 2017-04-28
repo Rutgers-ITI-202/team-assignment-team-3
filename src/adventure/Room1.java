@@ -11,7 +11,7 @@ public class Room1 implements Room{
 	boolean item = true;
 	
 	public Room1(){
-		System.out.println("-------You have entered the Storage Room-------");
+		System.out.println("\n----------You have entered the Storage Room----------");
 	}
 	
 	public String look(/*adventurer.textfile*/ArrayList<String>Description) {

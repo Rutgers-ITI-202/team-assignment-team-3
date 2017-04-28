@@ -15,30 +15,34 @@ public interface Room {
 	default Room move(int direction) {
 		// TODO Auto-generated method stub
 		switch (direction){
-		case 1:
-			if (getLeft()!=-1){
-				return getRoom(getLeft());
+			case 1:
+				if (getLeft()!=-1){
+					return getRoom(getLeft());
+				}
+				break;
+			
+			case 2:
+				if (getRight()!=-1){
+					return getRoom(getRight());
+				}
+				break;
+		
+			case 3:
+				if (getUp()!=-1){
+					return getRoom(getUp());
+				}
+				break;
+		
+			case 4:
+				if (getDown()!=-1){
+					return getRoom(getDown());
+				}
+				break;
+		
+			default:
+				System.out.println("You cannot move in this direction");
+				return null;
 			}
-			break;
-		case 2:
-			if (getRight()!=-1){
-				return getRoom(getRight());
-			}
-			break;
-		case 3:
-			if (getUp()!=-1){
-				return getRoom(getUp());
-			}
-			break;
-		case 4:
-			if (getDown()!=-1){
-				return getRoom(getDown());
-			}
-			break;
-		default:
-			System.out.println("You cannot move in this direction");
-			return null;
-		}
 		return null;
 	}
 	

@@ -3,8 +3,8 @@ to recall what had happened...Slowly you begin to remember. It was Sunday evenin
 major final exam coming up on Monday for you Object Oriented Programming Class. This was the exam 
 that would either make or break your grades for this course. Being the model university student that 
 you were, you didn't study for it until the night before. Exhausted after a long cram session, 
-you fell asleep in Young Adults section and it is now way pass closing hours. Just your luck, 
-your exam is starting in about an hour and if you don't get out of here in time, you're so screwed. 
+you fell asleep in Young Adults section and it is now way pass closing hours. It's just your luck that your exam starts 
+early tomorrow morning, before the library even opens, and if you don't get out of here soon you're so screwed. 
 Thankfully, you're still carrying your backpack but too bad there's nothing in it. The exit door is 
 probably locked and you can't leave without the MasterKey to unlock it! Objective: Find the MasterKey(to leave)! 
 
@@ -59,11 +59,11 @@ It's...the MasterKey! Your ticket to GTFO of here!
 Media alt Look - In front of you is an ordinary room with ordinary things that are meaningless to you, you already
 have the MasterKey, why are you still here?
 
-Second Floor:   |Media Room|   <-->   |Comics Section|       <-->    |Librarian's Office|
-
-First Floor:    |Bathroom|     <-->   |Children's Section|   <-->    |Lobby|
-
-Basement:       |Storage|      <-->   |Young Adults Section| <-->    |Archives|
+Second Floor:   |Media Room|   <-->   |   Comics Section   |   <-->   |Librarian's Office|
+																		 				    _-stairs-_
+First Floor:    | Bathroom |   <-->   | Children's Section |   <-->   |      Lobby       |
+																       				        _-stairs-_
+Basement:       | Storage  |   <-->   |Young Adults Section|   <-->   |     Archives     |
 
 You have no map! How the bloody hell do you expect to look at the map if you ain't got it?! Go get the damn map first!
 
@@ -74,4 +74,4 @@ in the library, to unlock the front exit in the lobby and escape!
 Interactive items are surrounded by '[ ]' and commands/options must typed out.
 Options:	         [ Start ]            [ Exit ]
 
-Command Options:  [ Look ]  [ Pick Up ]  [ Drop ]  [ Open Bag ]  [ End ]  [ Move Right ]  [ Move Left ]
+Command Options:  [ Look ]  [ Pick Up ]  [ Drop ]  [ Open Bag ]  [ Move Right ]  [ Move Left ]  [ Move Up ]  [ Move Down ]  [End]

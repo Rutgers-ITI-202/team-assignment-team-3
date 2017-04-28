@@ -12,7 +12,7 @@ public class Room9 implements Room {
 	boolean item = true;
 	
 	public Room9(){
-		System.out.println("-------You have entered the Media Lab-------");
+		System.out.println("\n----------You have entered the Media Lab----------");
 	}
 	
 	public String look(/*adventurer.textfile*/ArrayList<String>Description) {
